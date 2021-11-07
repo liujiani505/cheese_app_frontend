@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,900;1,400;1,600;1,900&display=swap');
+
+
+$primarycolor: rgb(243, 214, 177);
+$secondarycolor: rgb(94, 73, 46);
+$font: 'Playfair Display', serif;
+
+@mixin white-text-dark-bg {
+    color: white;
+    background-color: $secondarycolor;    
+}
+
+@mixin dark-text-light-bg {
+    color: rgb(53, 52, 52);
+    background-color: $primarycolor;    
+}
+
+
+.nav{
+    @include white-text-dark-bg;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-family: $font;
+    a {
+        @include white-text-dark-bg;
+        list-style-type: none;
+        text-decoration: none;
+    }
+}
+
+
+.cheese{
+    img{
+        width: 500px;
+    }
+}
+
+.cheeseContainer{
+    display: flex;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: $primarycolor;
+    font-family: $font;
+}
